@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura — Pure Sound. Pure Vision.</title>
+    <meta name="description" content="Experience the next generation of spatial audio and visual fidelity with Aura. Designed for the obsessed.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Geist', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
+                    },
+                    colors: {
+                        aura: {
+                            black: '#121212',
+                            white: '#fbfbfd',
+                            gray: '#f5f5f7',
+                            accent: '#0071e3',
+                            deep: '#1d1d1f'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+                        'scale-in': 'scaleIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0.8', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fbfbfd; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(251, 251, 253, 0.72); backdrop-filter: saturate(180%) blur(20px); }
+        .text-balance { text-wrap: balance; }
+        .mask-image-gradient { mask-image: linear-gradient(to bottom, black 70%, transparent 100%); }
+        .sticky-grid { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
+        .product-reveal { transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50 border-b border-black/[0.03]">
+        <div class="max-w-[1000px] mx-auto px-6 h-[48px] flex items-center justify-between">
+            <a href="#" class="text-xl font-semibold tracking-tighter hover:opacity-70 transition-opacity">Aura</a>
+            <div class="hidden md:flex space-x-8 text-xs font-normal text-black/80">
+                <a href="#vision" class="hover:text-black transition-colors">Vision</a>
+                <a href="#features" class="hover:text-black transition-colors">Audio</a>
+                <a href="#design" class="hover:text-black transition-colors">Design</a>
+                <a href="#specs" class="hover:text-black transition-colors">Specs</a>
+                <a href="#support" class="hover:text-black transition-colors">Support</a>
+            </div>
+            <button class="bg-aura-accent text-white px-3 py-1 rounded-full text-[11px] font-medium hover:bg-[#0077ed] transition-colors leading-tight">
+                Buy
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-20">
+        <div class="z-10 animate-fade-in-up">
+            <p class="text-[17px] md:text-[21px] font-medium text-aura-accent mb-2 tracking-tight">Introducing Aura Pro</p>
+            <h1 class="text-5xl md:text-[80px] font-semibold tracking-tight leading-[1.05] mb-6">Sound you can feel.</h1>
+            <p class="text-xl md:text-2xl text-black/60 max-w-2xl mx-auto font-normal text-balance">
+                Precision-engineered acoustics meet high-fidelity materials for a spatial experience unlike anything else.
+            </p>
+            <div class="mt-8 flex items-center justify-center space-x-6">
+                <a href="#" class="text-[17px] text-aura-accent hover:underline flex items-center">Learn more <span class="ml-1">›</span></a>
+                <a href="#" class="text-[17px] text-aura-accent hover:underline flex items-center">Watch the film <span class="ml-1">›</span></a>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 flex items-center justify-center pt-24">
+            <div class="w-full max-w-5xl animate-scale-in">
+                <!-- Using a high-quality abstract minimalist representation of soundwaves -->
+                <svg class="w-full h-auto opacity-80" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="500" cy="300" r="150" stroke="url(#paint0_linear)" stroke-width="0.5"/>
+                    <circle cx="500" cy="300" r="250" stroke="url(#paint1_linear)" stroke-width="0.5"/>
+                    <circle cx="500" cy="300" r="350" stroke="url(#paint2_linear)" stroke-width="0.5"/>
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="500" y1="150" x2="500" y2="450" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0071E3" stop-opacity="0.5"/>
+                            <stop offset="1" stop-color="#0071E3" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="500" y1="50" x2="500" y2="550" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0071E3" stop-opacity="0.3"/>
+                            <stop offset="1" stop-color="#0071E3" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear" x1="500" y1="-50" x2="500" y2="650" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0071E3" stop-opacity="0.1"/>
+                            <stop offset="1" stop-color="#0071E3" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Immersive Feature Section -->
+    <section id="vision" class="bg-aura-black text-aura-white py-32 md:py-48 px-6">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-8">Spatial Audio. <br><span class="text-white/40">Redefined.</span></h2>
+                    <p class="text-lg md:text-xl text-white/60 leading-relaxed mb-8">
+                        Our dynamic head tracking technology places sound all around you, creating a three-dimensional listening experience that makes music, movies, and games feel profoundly real.
+                    </p>
+                    <div class="w-full h-px bg-white/10 mb-8"></div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                        </div>
+                        <p class="text-sm text-white/50">Personalized Spatial Audio adapts specifically to your ear shape for unparalleled immersion.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="aspect-square bg-gradient-to-tr from-stone-900 to-stone-800 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                        <!-- Abstract high-res metal texture representation -->
+                        <div class="absolute inset-0 opacity-40 mix-blend-overlay bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000')] bg-cover"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-48 h-48 rounded-full border border-white/10 flex items-center justify-center animate-pulse">
+                                 <div class="w-32 h-32 rounded-full border border-white/20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section id="features" class="py-32 px-6">
+        <div class="max-w-[1100px] mx-auto">
+            <div class="mb-20">
+                <h2 class="text-center text-4xl md:text-[56px] font-semibold tracking-tight mb-6">Mastery in every detail.</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white border border-black/[0.03] rounded-[32px] p-10 flex flex-col justify-between hover:shadow-xl transition-shadow duration-500 min-h-[460px]">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 tracking-tight">Active Noise Cancellation.</h3>
+                        <p class="text-black/50 leading-relaxed">External sounds are cancelled before you even hear them, focusing purely on your audio.</p>
+                    </div>
+                    <div class="bg-aura-gray h-48 rounded-2xl flex items-end justify-center overflow-hidden">
+                        <div class="w-2/3 h-1/2 bg-aura-deep rounded-t-xl mb-[-20px] shadow-lg"></div>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white border border-black/[0.03] rounded-[32px] p-10 flex flex-col justify-between hover:shadow-xl transition-shadow duration-500 min-h-[460px]">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 tracking-tight">40-Hour Battery.</h3>
+                        <p class="text-black/50 leading-relaxed">Listen for days on a single charge. A five-minute quick charge provides three hours of playback.</p>
+                    </div>
+                    <div class="flex items-center justify-center h-48">
+                         <span class="text-8xl font-bold tracking-tighter text-aura-gray">40h</span>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="md:col-span-2 lg:col-span-1 bg-aura-deep text-white rounded-[32px] p-10 flex flex-col justify-between hover:shadow-xl transition-shadow duration-500 min-h-[460px]">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 tracking-tight">Adaptive EQ.</h3>
+                        <p class="text-white/50 leading-relaxed">Automatic tuning for the shape of your ear in real-time for consistent, rich detail.</p>
+                    </div>
+                    <div class="flex flex-col space-y-3 opacity-30">
+                        <div class="h-1 bg-white rounded-full w-full"></div>
+                        <div class="h-1 bg-white rounded-full w-3/4"></div>
+                        <div class="h-1 bg-white rounded-full w-full"></div>
+                        <div class="h-1 bg-white rounded-full w-5/6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Product Showcase -->
+    <section id="design" class="bg-aura-gray py-24 md:py-40">
+        <div class="max-w-[1200px] mx-auto px-6 overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center gap-16 md:gap-0">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&q=80&w=1200" alt="Headphone detail" class="rounded-[40px] shadow-2xl transform md:-translate-x-12 scale-110">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-20">
+                    <span class="uppercase tracking-widest text-[13px] font-bold text-black/40 mb-4 block">Materials</span>
+                    <h2 class="text-4xl md:text-[44px] font-semibold tracking-tight leading-tight mb-8">Crafted for comfort, <br>built for longevity.</h2>
+                    <p class="text-lg text-black/60 leading-relaxed mb-6">
+                        From the canopy to the ear cushions, Aura is designed for an uncompromising fit that creates the optimal acoustic seal.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-aura-accent rounded-full"></div>
+                            <span class="font-medium">Breathable knit mesh canopy</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-aura-accent rounded-full"></div>
+                            <span class="font-medium">Stainless steel frame</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-aura-accent rounded-full"></div>
+                            <span class="font-medium">Memory foam ear cushions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Quote -->
+    <section class="py-32 px-6 flex items-center justify-center">
+        <div class="max-w-[800px] text-center">
+            <p class="font-serif italic text-3xl md:text-5xl text-black/90 leading-tight mb-12">
+                "The separation between frequencies is startling. It feels like hearing your favorite records for the very first time."
+            </p>
+            <div class="flex items-center justify-center flex-col">
+                <div class="w-16 h-16 bg-aura-gray rounded-full mb-4 flex items-center justify-center text-xl font-bold">M</div>
+                <span class="text-sm font-semibold tracking-wide uppercase">Marcus Thorne</span>
+                <span class="text-[13px] text-black/40">Audiophile Magazine</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="support" class="py-32 px-6 border-t border-black/[0.05]">
+        <div class="max-w-[800px] mx-auto">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-16">Questions? Answers.</h2>
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-aura-gray/50 rounded-2xl p-6 md:p-8 cursor-pointer border border-transparent transition-all hover:bg-aura-gray">
+                    <summary class="list-none flex justify-between items-center outline-none">
+                        <h3 class="text-lg font-medium pr-8">Is Aura compatible with non-native devices?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-2xl font-thin">+</span>
+                    </summary>
+                    <p class="mt-6 text-black/60 leading-relaxed">
+                        Yes. While Aura Pro offers an enhanced experience with native ecosystems, it connects via Bluetooth 5.3 to any compatible smartphone, tablet, or computer.
+                    </p>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="group bg-aura-gray/50 rounded-2xl p-6 md:p-8 cursor-pointer border border-transparent transition-all hover:bg-aura-gray">
+                    <summary class="list-none flex justify-between items-center outline-none">
+                        <h3 class="text-lg font-medium pr-8">How does the spatial audio tracking work?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-2xl font-thin">+</span>
+                    </summary>
+                    <p class="mt-6 text-black/60 leading-relaxed">
+                        Using built-in gyroscopes and accelerometers, Aura tracks the movement of your head relative to your device, remapping the sound field so it stays anchored to your screen.
+                    </p>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="group bg-aura-gray/50 rounded-2xl p-6 md:p-8 cursor-pointer border border-transparent transition-all hover:bg-aura-gray">
+                    <summary class="list-none flex justify-between items-center outline-none">
+                        <h3 class="text-lg font-medium pr-8">What is the warranty coverage?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-45 text-2xl font-thin">+</span>
+                    </summary>
+                    <p class="mt-6 text-black/60 leading-relaxed">
+                        Aura comes with a standard one-year limited warranty and up to 90 days of complimentary technical support. Protection plans are available at checkout.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 bg-aura-gray px-6">
+        <div class="max-w-[1000px] mx-auto text-center">
+            <h2 class="text-5xl md:text-[64px] font-semibold tracking-tight mb-8">Ready to listen?</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button class="w-full sm:w-auto px-10 py-4 bg-aura-accent text-white rounded-full font-medium hover:brightness-110 active:scale-95 transition-all text-[17px]">
+                    Buy Aura Pro
+                </button>
+                <div class="h-12 border-l border-black/10 hidden sm:block mx-4"></div>
+                <p class="text-[17px] text-black/50">From $499 or $41.58/mo. for 12 mo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-aura-gray pt-12 pb-24 px-6">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="text-[11px] text-black/50 leading-relaxed space-y-4 pb-8 border-b border-black/10">
+                <p>1. Requires a compatible device and software. Works with supported content in supported apps. Not all content available in Dolby Atmos.</p>
+                <p>2. Testing conducted with preproduction Aura Pro units. Battery life depends on device settings, environment, usage, and many other factors.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-10">
+                <div>
+                    <h4 class="text-xs font-semibold text-black/80 mb-4 tracking-wider uppercase">Shop</h4>
+                    <ul class="text-xs space-y-3 text-black/60">
+                        <li><a href="#" class="hover:underline">Aura Pro</a></li>
+                        <li><a href="#" class="hover:underline">Accessories</a></li>
+                        <li><a href="#" class="hover:underline">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold text-black/80 mb-4 tracking-wider uppercase">Services</h4>
+                    <ul class="text-xs space-y-3 text-black/60">
+                        <li><a href="#" class="hover:underline">Care+</a></li>
+                        <li><a href="#" class="hover:underline">Aura Music</a></li>
+                        <li><a href="#" class="hover:underline">Trade-in</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold text-black/80 mb-4 tracking-wider uppercase">Account</h4>
+                    <ul class="text-xs space-y-3 text-black/60">
+                        <li><a href="#" class="hover:underline">Manage ID</a></li>
+                        <li><a href="#" class="hover:underline">Aura Store</a></li>
+                        <li><a href="#" class="hover:underline">Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold text-black/80 mb-4 tracking-wider uppercase">Values</h4>
+                    <ul class="text-xs space-y-3 text-black/60">
+                        <li><a href="#" class="hover:underline">Accessibility</a></li>
+                        <li><a href="#" class="hover:underline">Environment</a></li>
+                        <li><a href="#" class="hover:underline">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-black/50">
+                <div class="mb-4 md:mb-0">
+                    Copyright © 2024 Aura Inc. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-black transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-black transition-colors">Terms of Use</a>
+                    <a href="#" class="hover:text-black transition-colors">Sales Policy</a>
+                    <a href="#" class="hover:text-black transition-colors">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // Apply to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
